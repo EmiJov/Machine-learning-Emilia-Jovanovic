@@ -13,7 +13,7 @@ The goal was to:
 - calculate similarity between movies
 - recommend movies based on a given title
 
-The main idea is to use text information to find movies that are similar
+The main idea is to use text information to find movies that are similar.
 
 ## Dataset
 
@@ -26,6 +26,12 @@ I used the MovieLens **ml-latest** dataset, which includes:
 | tags.csv    | User‑generated tags      |
 
 Since the dataset is large, I filtered out movies with very few ratings.
+
+## Theoretical Background
+
+Recommender systems are often either content‑based or collaborative filtering.  
+This project uses a content‑based approach, comparing movies using genres and tags.  
+Collaborative filtering uses user ratings but requires more data and is more complex.
 
 ## Method
 
@@ -80,13 +86,27 @@ The system returned the following similar movies:
 - Thirteenth Floor, The (1999)
 - Avalon (2001)
 - Matrix Reloaded, The (2003)
-- Matrix, The (1999)
 
 These movies share similar themes such as sci‑fi, simulated worlds, and dystopian settings.  
 The recommendations make sense and show that the model works well.
+
+### Results Analysis
+
+For “The Matrix”, the system recommends movies with similar sci-fi themes.  
+Most results make sense, especially when movies have clear genres and tags.  
+Some recommendations are mainly based on shared words rather than true similarity.  
+This shows that the model captures general themes but not deeper story meaning.
+
+### Limitations
+
+The TF‑IDF model only looks at words and does not understand deeper meaning.  
+The system also depends on user tags, which can be inconsistent or missing.  
+It is not personalized, so all users get the same recommendations.  
+Since only part of the ratings data was used, some results may be affected.
 
 ## Conclusion
 
 The system can recommend movies based on their genres and tags.  
 Weighted features, fuzzy matching, and on‑demand similarity calculations make it both accurate and efficient.  
 The project shows how text data can be used to build a simple but effective recommender system.
+However, there is still room for improvement, for example by including user ratings or more advanced models.
