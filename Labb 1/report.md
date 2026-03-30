@@ -69,3 +69,24 @@ This gives each movie a vector that can be compared with others.
 
 To find similar movies, I calculated the cosine similarity between the selected movie and all others.  
 I only compute similarity when needed, which keeps the system fast.
+
+## Results
+
+### Example: “The Matrix”
+
+The system returned the following similar movies:
+
+- Matrix Revolutions, The (2003)
+- Thirteenth Floor, The (1999)
+- Avalon (2001)
+- Matrix Reloaded, The (2003)
+- Matrix, The (1999)
+
+These movies share similar themes such as sci‑fi, simulated worlds, and dystopian settings.  
+The recommendations make sense and show that the model works well.
+
+## Conclusion
+
+The system can recommend movies based on their genres and tags.  
+Weighted features, fuzzy matching, and on‑demand similarity calculations make it both accurate and efficient.  
+The project shows how text data can be used to build a simple but effective recommender system.
